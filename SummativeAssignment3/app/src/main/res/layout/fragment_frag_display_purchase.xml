@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragDisplay"
+    android:background="@drawable/gradient_drawable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoClickable"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:srcCompat="@drawable/hhmlogo"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="backToMain"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rdioGroupDisplayPurchases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:onClick="onClickRadio">
+
+                <RadioButton
+                    android:id="@+id/rdioAllPurchases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Display All Purchases"
+                    android:checked="true"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/rdioSearchPurchaseByPurchaseId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Display Purchases by Purchase Id"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/rdioSearchPurchaseByPetId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Display Purchases by Pet Id"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/rdioSearchPurchaseByClientId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Display Purchases by Client Id"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/rdioSearchPurchaseByPetName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Display Purchases by Pet Name"
+                    android:textColor="@color/white"/>
+
+                <RadioButton
+                    android:id="@+id/rdioSearchPurchaseByClientFirstAndLastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Display Purchases by Client First and Last Name"
+                    android:textColor="@color/white"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/searchHolderPurchases"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextSearchPurchases1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint = "Enter Value 1"
+                    android:textColor="@color/white"/>
+
+                <EditText
+                    android:id="@+id/editTextSearchPurchases2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint = "Enter Value 2"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/btnSearchPurchases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search Purchases"/>
+
+
+                <TextView
+                    android:id="@+id/textResultsPurchases"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Your Result for Purchases will be shown here"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/logoClickable"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:srcCompat="@drawable/hhmlogo"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="backToMain"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What is HHM Pet Store?"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/whatishhmpetstore" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="That is a Valid Question: HHM Pet Store is a Pet Store that Specializes in Simple Online Transactions. Register as a Client, and Then you can Make a Purchase and Pick the Pet up at One of Our Stores."
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <RadioGroup
+            android:id="@+id/RdioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/RdioBtnVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Display Video"
+                android:textColor="@color/white"/>
+
+            <VideoView
+                android:id="@+id/videoView1"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                />
+
+            <RadioButton
+                android:id="@+id/RdioBtnImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Display Image Gallery"
+                android:textColor="@color/white"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/checkRdioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Display Selected Radio Items"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <RadioGroup
+            android:id="@+id/RdioGroupImagesContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/card_1"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/card_2"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/card_3"/>
+            </androidx.cardview.widget.CardView>
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="backToMain"
+            android:text="Back to Main"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+</ScrollView>

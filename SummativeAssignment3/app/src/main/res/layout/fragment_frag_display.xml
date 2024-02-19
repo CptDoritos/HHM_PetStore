@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragDisplay"
+    android:background="@drawable/gradient_drawable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoClickable"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:srcCompat="@drawable/hhmlogo"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="backToMain"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rdioGroupDisplayPets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:onClick="onClickRadio">
+            
+        <RadioButton
+            android:id="@+id/rdioAllPets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Display All Pets"
+            android:checked="true"
+            android:textColor="@color/white"/>
+
+            <RadioButton
+                android:id="@+id/rdioSearchPets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Display Pets By Name"
+                android:textColor="@color/white"/>
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/searchHolderPets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextSearchPets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint = "Enter Search Name"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnSearchPets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search Pets"/>
+
+
+            <TextView
+                android:id="@+id/textResultsPets"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Your Result for Pets will be shown here"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

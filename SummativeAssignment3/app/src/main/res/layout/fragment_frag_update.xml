@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragUpdate"
+    android:background="@drawable/gradient_drawable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoClickable"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:srcCompat="@drawable/hhmlogo"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="backToMain"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editUpdateIDPet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter ID of the name to update"
+                android:inputType="number"
+                android:textSize="20sp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnUpdatePet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Pet"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editUpdateSpecies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="Enter New Species"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/editUpdatePetName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="Enter New Name"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/editUpdateAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:hint="Enter New Age"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/editUpdateFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="Enter New Food"
+            android:textColor="@color/white"/>
+
+        <View
+            android:id="@+id/dividerPet"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/teal_700"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current List"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtDispUpdatePet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>

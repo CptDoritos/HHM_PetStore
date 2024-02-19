@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragDeleteClient"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_drawable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logoClickable"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        app:srcCompat="@drawable/hhmlogo"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="backToMain"/>
+
+    <EditText
+        android:id="@+id/editDeleteClientfirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Client's First name"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/editDeleteClientlastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Client's Last name"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btnDeleteClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Client"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/dividerClient"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/teal_700"/>
+
+    <TextView
+        android:id="@+id/textViewClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Current List"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/txtDispDeleteClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>

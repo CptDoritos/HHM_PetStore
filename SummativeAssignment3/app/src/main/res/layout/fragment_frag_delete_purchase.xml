@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FragDelete"
+    android:background="@drawable/gradient_drawable">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logoClickable"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            app:srcCompat="@drawable/hhmlogo"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="backToMain"/>
+
+        <EditText
+            android:id="@+id/editDeletePurchasePetId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the Pet Id of the Purchase to Delete"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editDeletePurchaseClientId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter the Client Id of the Purchase to Delte"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnDeletePurchase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Purchase"
+            android:textSize="20sp"/>
+
+        <View
+            android:id="@+id/dividerPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/teal_700"/>
+
+        <TextView
+            android:id="@+id/textViewPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Current List"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtDispDeletePurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List"
+            android:textSize="20sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>
